@@ -1,21 +1,34 @@
-Full name:  ___Chun Chang ___________
-SEAS login: _____Chun3_________
+# Email Server
+- [Brief](#project-brief)  
+- [Use](#use)
 
-Which features did you implement? 
-  (list features, or write 'Entire assignment')
-'Entire assignment of HW 2'
-Did you complete any extra-credit tasks? If so, which ones?
-  (list extra-credit tasks)
-none
-Did you personally write _all_ the code you are submitting
-(other than code from the course web page)?
-  [x] Yes
-  [] No
+## Project Brief
+The project is a multithreaded C++ email server compatible with Thundermail in linux<br/>
+The system supports<br/>
+:key:user sign-up/log-in<br/>
+:email:mail write/send<br/>
 
-Did you copy any code from the Internet, or from classmates?
-  [ ] Yes
-  [x] No
+## Architect
+• USER, which tells the server which user is logging in;
+• PASS, which specifies the user's password;
+• STAT, which returns the number of messages and the size of the mailbox;
+• UIDL, which shows a list of messages, along with a unique ID for each message;
+• RETR, which retrieves a particular message;
+• DELE, which deletes a message;
+• QUIT, which terminates the connection;
+• LIST, which shows the size of a particular message, or all the messages;
+• RSET, which undeletes all the messages that have been deleted with DELE; and
+• NOOP, which does nothing.
 
-Did you collaborate with anyone on this assignment?
-  [ ] Yes
-  [x] No
+## Use
+1. Go to the directories: ./smtp or ./pop3 and do: 
+```bash 
+make
+```
+2. 
+```bash
+./pop3 localhost
+```
+
+## Technologies
+C++
